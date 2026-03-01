@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter",
+          "text-justify",
+          "text-justify: inter-word"
+        ]
+      }
+    ],
+    "no-inline-styles": "off",
+    "axe/aria": "off",
+    "css-prefix-order": "off"
+  }
+}
