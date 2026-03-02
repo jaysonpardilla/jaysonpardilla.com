@@ -29,7 +29,7 @@
 
 		try{
 			// Always post directly to the backend dev server to avoid initial POST to static Live Server
-			const endpoint = 'http://localhost:8000/contact-endpoint/';
+			const endpoint = 'https://endpoint-pchg.onrender.com/contact-endpoint/';
 			let res = await fetch(endpoint, {
 				method: 'POST',
 				mode: 'cors',
