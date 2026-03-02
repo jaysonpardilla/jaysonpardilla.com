@@ -8,10 +8,9 @@ Usage:
 import os, sys, json, traceback
 import requests
 
-URL = os.getenv("BACKEND_URL", "https://endpoint-pchg.onrender.com/contact-endpoint/")
+URL = os.getenv("BACKEND_URL", "https://endpoint-production-778f.up.railway.app/contact-endpoint/")
 
-payload = {
-    "name": "Test User",
+payload = {    "name": "Test User",
     "email": "test@example.com",
     "message": "This is a test from test_contact.py"
 }
