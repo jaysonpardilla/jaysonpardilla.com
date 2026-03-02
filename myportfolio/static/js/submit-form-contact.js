@@ -29,7 +29,7 @@
 
 		try{
 			// Always post directly to the backend dev server to avoid initial POST to static Live Server
-			const endpoint = 'https://endpoint-production-778f.up.railway.app/contact-endpoint/';
+			const endpoint = 'https://captivating-joy-production-1e9c.up.railway.app/contact-endpoint/';
 			let res = await fetch(endpoint, {
 				method: 'POST',
 				mode: 'cors',
@@ -39,8 +39,8 @@
 
 			// If the current origin doesn't have the endpoint (e.g. Live Server on :5500),
 			// retry against the Django dev server at localhost:8000.
-			if((res.status === 405 || res.status === 404 || res.status === 0) && !endpoint.startsWith('https://endpoint-production-778f.up.railway.app')){
-					const fallback = 'https://endpoint-production-778f.up.railway.app/contact-endpoint/';
+			if((res.status === 405 || res.status === 404 || res.status === 0) && !endpoint.startsWith('https://captivating-joy-production-1e9c.up.railway.app')){
+					const fallback = 'https://captivating-joy-production-1e9c.up.railway.app/contact-endpoint/';
 				try{
 					res = await fetch(fallback, {
 						method: 'POST',
