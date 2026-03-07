@@ -1,3 +1,143 @@
+/* 3D Cylinder Carousel Styles */
+.carousel-3d-container {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto 40px auto;
+    perspective: 1200px;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-3d-viewport {
+    width: 100%;
+    height: 420px;
+    position: relative;
+    perspective: 1200px;
+    /* allow side cards to be visible outside the viewport */
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-3d-track {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(.77,0,.18,1);
+    transform-origin: 50% 50% 0;
+}
+    .carousel-3d-track .card {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 340px;
+        height: 440px;
+        margin-left: -170px;
+        margin-top: -220px;
+        background: var(--bs-dark, #222);
+        color: #fff;
+        border-radius: 22px;
+        box-shadow: 0 12px 40px rgba(0,0,0,0.20);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        opacity: 0.98;
+        transition: transform 480ms cubic-bezier(.2,.9,.2,1), box-shadow 320ms, filter 0.3s, opacity 0.3s;
+        will-change: transform, opacity;
+    }
+    .carousel-3d-track .card img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+        border-radius: 22px 22px 0 0;
+    }
+
+    /* Hover / focus visual lift for cards */
+    .carousel-3d-track .card:hover,
+    .carousel-3d-track .card:focus-within{
+        box-shadow: 0 28px 60px rgba(2,8,20,0.5);
+        filter:brightness(1.04) saturate(1.02);
+    }
+
+    /* subtle entrance transition when transform changes */
+    .carousel-3d-track .card{
+        transition: transform 420ms cubic-bezier(.2,.9,.2,1), box-shadow 320ms, opacity 300ms;
+    }
+
+    /* Small variant: use by adding class `small` to the container: */
+    .carousel-3d-container.small .carousel-3d-track .card {
+        width: 300px;
+        height: 380px;
+        margin-left: -150px;
+        margin-top: -190px;
+        border-radius: 16px;
+        box-shadow: 0 8px 28px rgba(219, 95, 95, 0.386);  
+        border-color: #6fffe9;
+    } 
+    .carousel-3d-container.small .carousel-3d-track .card img {
+        height: 140px;
+        border-radius: 16px 16px 0 0;
+    }
+.carousel-3d-track .card h4 {
+    margin: 18px 0 8px 0;
+    font-size: 1.2rem;
+}
+.carousel-3d-track .card p {
+    font-size: 0.98rem;
+    padding: 0 12px 12px 12px;
+    color: var(--muted, #b0b0b0);
+}
+.carousel-btn {
+    background: var(--accent, #6fffe9);
+    color: #222;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 2rem;
+    margin: 0 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: background 0.2s, color 0.2s;
+    z-index: 2;
+}
+.carousel-btn:active {
+    background: #4fd1c5;
+}
+
+
+/* Pagination dots for 3D carousel */
+.carousel-3d-pagination{
+    position:absolute;
+    bottom:18px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:10px;
+    z-index:600;
+}
+.carousel-3d-pagination .carousel-dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.06);
+    padding:0;
+    cursor:pointer;
+    transition:transform 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+.carousel-3d-pagination .carousel-dot:focus{outline:2px solid rgba(111,255,233,0.14)}
+.carousel-3d-pagination .carousel-dot.active{
+    background:var(--accent);
+    transform:scale(1.35);
+    box-shadow:0 8px 20px rgba(6,16,22,0.35);
+}
 :root{
     /* New interactive theme */
     --prussian-blue: #0b132bff;
@@ -209,7 +349,7 @@ p.lead{color:var(--muted);max-width:520px;font-size:16px;line-height:1.6}
 }
 
 
-#portfolio{min-height:500px;padding-top:48px;padding-bottom:20px}
+#portfolio{min-height:550px;padding-top:48px;padding-bottom:20px}
 @media (max-width:900px){
     #portfolio{min-height:400px;padding-top:28px;padding-bottom:10px}
 }

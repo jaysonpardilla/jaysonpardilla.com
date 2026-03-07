@@ -37,13 +37,12 @@
                 </p>
 				<div class="meta">
 					<div>
-						<strong style="display:block;color:#fff">Email:</strong>
-						<span style="color:var(--muted)">jaysonpardilla278@gmail.com</span>
-					</div>
-				</div>
 
-				<div class="buttons">
-					<button class="btn btn-primary">Download CV</button>
+					</div>
+				</div>		
+
+				<div class="buttons mt-4">
+					<a href="myportfolio/assets/RESUME.pdf" download="RESUME.pdf" class="btn btn-primary" id="downloadcv">Download CV</a>
 					<button class="btn" id="hire-btn">Hire Me Now!</button>
 				</div>
 
@@ -186,6 +185,13 @@
 							<div class="progress-bar"></div>
 						</div>
 						<span class="percent">80%</span>
+					</div> 
+					<div class="skill-progress" data-delay="3" style="--value:90;--duration:1.2s">
+						<strong>UI UX using Figma</strong>
+						<div class="progress" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+							<div class="progress-bar"></div>
+						</div>
+						<span class="percent">90%</span>
 					</div>
 					</aside>
 				</section>
@@ -196,38 +202,35 @@
 		<!-- Portfolio Section -->
 		<section id="portfolio" class="section p-2" aria-label="Portfolio">
 			<h4 class="p-3 mb-3">Selected Projects</h4>
-			<div class="carousel p-3" aria-roledescription="carousel" aria-label="Projects carousel" tabindex="0">
+			<div class="carousel-3d-container p-4">
 				<button class="carousel-btn prev" aria-label="Previous project">‹</button>
-				<div class="carousel-viewport p-5">
-					<div class="carousel-track">
+				<div class="carousel-3d-viewport">
+					<div class="carousel-3d-track">
 						<article class="card">
-							<img src="https://images.unsplash.com/photo-1521747116042-5a810fda9664?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="Project screenshot">
+							<img class="image" src="https://images.unsplash.com/photo-1521747116042-5a810fda9664?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="Project screenshot">
 							<h4>Project One</h4>
 							<p style="color:var(--muted)">A short description of the project and technologies used.</p>
 						</article>
 						<article class="card">
-							<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="Project screenshot">
-							<h4>Project Two</h4>
-							<p style="color:var(--muted)">A short description of the project and technologies used.</p>
-						</article>
-						<article class="card">
-							<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="Project screenshot">
+							<img class="image" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="Project screenshot">
 							<h4>Project Three</h4>
 							<p style="color:var(--muted)">A short description of the project and technologies used.</p>
-						</article> 
+						</article>
 						<article class="card">
-							<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="Project screenshot">
-							<h4>Project four</h4>
+							<img class="image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="Project screenshot">
+							<h4>Project Four</h4>
 							<p style="color:var(--muted)">A short description of the project and technologies used.</p>
 						</article>
 						<article class="card">
-							<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="Project screenshot">
-							<h4>Project fove</h4>
+							<img class="image" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="Project screenshot">
+							<h4>Project Five</h4>
 							<p style="color:var(--muted)">A short description of the project and technologies used.</p>
 						</article>
-					</div> 
+					</div>
 				</div>
 				<button class="carousel-btn next" aria-label="Next project">›</button>
+				<!-- pagination dots will be injected here -->
+				<div class="carousel-3d-pagination" aria-label="Carousel pagination"></div>
 			</div>
 		</section>
 		<!-- End Portfolio Section --> 
@@ -235,16 +238,14 @@
 		<!-- Contact Section -->
 		<section id="contact" class="section" aria-label="Contact me" style="padding:0; padding-top:120px"> 
 			<div class="mt-0" style="align-items:right;display:flex;flex-direction:column;gap:15px">
-				<h4 class="mt-1">Contact Me</h4>
-				<form id="contact-form" class="contact-form" action="#" method="post">
+				<h4 class="mt-1">My Contact Information</h4>
+				<div id="contact-form" class="contact-form" action="#" method="post">
 					<div id="contact-msg" role="status" aria-live="polite" style="margin-bottom:12px"></div>
-					<input class="input" type="text" name="name" placeholder="Your name" required />
-					<input class="input" type="email" name="email" placeholder="Your email" required />
-					<textarea class="input" name="message" rows="6" placeholder="Message" required></textarea>
-					<div>
-						<button class="btn btn-primary" type="submit">Send Message</button>
-					</div>
-				</form>
+					<div class="input" type="text" name="name" disabled placeholder="Your name" required>mobile number: 09563167462</div>
+					<div class="input" type="email" name="email" placeholder="Your email" required>email: codewithdocsonji16@gmail.com</div>
+					<div class="input" type="text" name="name" placeholder="Your name" required>instagram: <a href="https://www.instagram.com/docsonjii?igsh=YXo0N2k1djg0NnB1" target="_blank">Instagram Link</a></div>
+					<div class="input" type="text" name="email" placeholder="Your email" required>facebook: <a href="https://web.facebook.com/pardilla.jayson.5/" target="_blank">Facebook Link</a></div>
+				</div>
 			</div>
 		</section>
 		<!-- End Contact Section --> 
@@ -264,6 +265,7 @@
 	<script src="myportfolio/static/js/hire-button.js"></script>
 	<script src="myportfolio/static/js/entrance-observer.js"></script>
 	<script src="myportfolio/static/js/submit-form-contact.js"></script>
+	<script src="myportfolio/static/js/carousel-3d.js"></script>
 </body>
 </html>
 
